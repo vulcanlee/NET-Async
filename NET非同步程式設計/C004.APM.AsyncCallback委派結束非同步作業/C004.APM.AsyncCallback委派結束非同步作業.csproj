@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64F183FD-9AEE-4196-AAD8-79080E364DC8}</ProjectGuid>
+    <ProjectGuid>{033841A5-9E28-478B-BFED-0B30E2A35F15}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>C001.封鎖應用程式執行AsyncWaitHandle</RootNamespace>
-    <AssemblyName>C001.封鎖應用程式執行AsyncWaitHandle</AssemblyName>
+    <RootNamespace>C004.APM.AsyncCallback委派結束非同步作業</RootNamespace>
+    <AssemblyName>C004.APM.AsyncCallback委派結束非同步作業</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

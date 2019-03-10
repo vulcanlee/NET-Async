@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C001.封鎖應用程式執行AsyncWaitHandle", "C001.封鎖應用程式執行AsyncWaitHandle\C001.封鎖應用程式執行AsyncWaitHandle.csproj", "{64F183FD-9AEE-4196-AAD8-79080E364DC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C005.EAP事件架構非同步模式", "C005.EAP事件架構非同步模式\C005.EAP事件架構非同步模式.csproj", "{C4F2269A-4F63-46D3-B842-130F161A460F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C006.TAP以工作為基礎的非同步模式", "C006.TAP以工作為基礎的非同步模式\C006.TAP以工作為基礎的非同步模式.csproj", "{A65DE3FC-63A3-4CF0-931B-9EADF99699D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C001.APM封鎖應用程式執行AsyncWaitHandle", "C001.APM封鎖應用程式執行AsyncWaitHandle\C001.APM封鎖應用程式執行AsyncWaitHandle.csproj", "{232189B6-6283-43E2-830C-B1A992167034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C002.APM封鎖應用程式執行結束非同步作業方式", "C002.APM封鎖應用程式執行結束非同步作業方式\C002.APM封鎖應用程式執行結束非同步作業方式.csproj", "{08A4A3B7-DA52-43D9-BE08-7BA917B760E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C003.APM輪詢非同步作業的狀態", "C003.APM輪詢非同步作業的狀態\C003.APM輪詢非同步作業的狀態.csproj", "{7C7F65B2-0B1C-4816-BB39-154167D84E78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C004.APM.AsyncCallback委派結束非同步作業", "C004.APM.AsyncCallback委派結束非同步作業\C004.APM.AsyncCallback委派結束非同步作業.csproj", "{033841A5-9E28-478B-BFED-0B30E2A35F15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +21,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64F183FD-9AEE-4196-AAD8-79080E364DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64F183FD-9AEE-4196-AAD8-79080E364DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64F183FD-9AEE-4196-AAD8-79080E364DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64F183FD-9AEE-4196-AAD8-79080E364DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F2269A-4F63-46D3-B842-130F161A460F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F2269A-4F63-46D3-B842-130F161A460F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4F2269A-4F63-46D3-B842-130F161A460F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F2269A-4F63-46D3-B842-130F161A460F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A65DE3FC-63A3-4CF0-931B-9EADF99699D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A65DE3FC-63A3-4CF0-931B-9EADF99699D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A65DE3FC-63A3-4CF0-931B-9EADF99699D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A65DE3FC-63A3-4CF0-931B-9EADF99699D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{232189B6-6283-43E2-830C-B1A992167034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232189B6-6283-43E2-830C-B1A992167034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232189B6-6283-43E2-830C-B1A992167034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232189B6-6283-43E2-830C-B1A992167034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08A4A3B7-DA52-43D9-BE08-7BA917B760E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08A4A3B7-DA52-43D9-BE08-7BA917B760E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08A4A3B7-DA52-43D9-BE08-7BA917B760E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08A4A3B7-DA52-43D9-BE08-7BA917B760E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7F65B2-0B1C-4816-BB39-154167D84E78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7F65B2-0B1C-4816-BB39-154167D84E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7F65B2-0B1C-4816-BB39-154167D84E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7F65B2-0B1C-4816-BB39-154167D84E78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{033841A5-9E28-478B-BFED-0B30E2A35F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{033841A5-9E28-478B-BFED-0B30E2A35F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{033841A5-9E28-478B-BFED-0B30E2A35F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{033841A5-9E28-478B-BFED-0B30E2A35F15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

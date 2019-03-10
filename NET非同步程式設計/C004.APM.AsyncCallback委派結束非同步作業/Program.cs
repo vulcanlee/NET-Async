@@ -7,16 +7,29 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace C001.封鎖應用程式執行AsyncWaitHandle
+namespace C004.APM.AsyncCallback委派結束非同步作業
 {
-    // 使用 AsyncWaitHandle 封鎖應用程式執行
-    // https://msdn.microsoft.com/zh-tw/library/ms228962(v=vs.110).aspx
+    // 使用 AsyncCallback 委派結束非同步作業
     //
-    // 下列程式碼範例會示範使用 HttpWebRequest 來非同步方法存取網路服務。 
-    // 且會示範使用與非同步作業關聯的 WaitHandle 來進行封鎖。 
-    // 請注意，由於在使用此處理方法 (BeginGetResponse) 時不需要 回呼 callback 委派方法與 狀態 state 物件，對於這兩個參數都會傳遞 null。
+    // 下列程式碼範例會示範使用 HttpWebRequest 類別來非同步方法存取網路服務。 
+    // 此範例會建立參考 ResponseCallback 方法的 AsyncCallback 委派。
+    // 這個方法會對 DNS 資訊的每個非同步要求都呼叫一次。
     class Program
     {
+        private static void ResponseCallback(IAsyncResult ar)
+        {
+            HttpWebRequest request = ar.AsyncState as HttpWebRequest;
+            Console.WriteLine($"取得非同步方法結果 (Thread={Thread.CurrentThread.ManagedThreadId}):{DateTime.Now}");
+            HttpWebResponse webResponse = request.EndGetResponse(ar) as HttpWebResponse;//取得資料
+            Console.WriteLine($"成功取得非同步方法結果 (Thread={Thread.CurrentThread.ManagedThreadId}):{DateTime.Now}");
+
+            Stream ReceiveStream = webResponse.GetResponseStream();
+            StreamReader reader = new StreamReader(ReceiveStream);
+            string result = reader.ReadToEnd();
+
+            Console.WriteLine($"網頁執行結果:{result}");
+
+        }
         static void Main(string[] args)
         {
             try
@@ -26,35 +39,24 @@ namespace C001.封鎖應用程式執行AsyncWaitHandle
                 string path = "/api/RemoteSource/Add/15/43/5";
                 string url = $"{host}{path}";
 
+                // 針對非同步請求，產生委派方法，用於處理非同步工作執行完成後的結果
+                AsyncCallback callBack = new AsyncCallback(ResponseCallback);
+
                 // 使用 WebRequest.Create 工廠方法建立一個 HttpWebrequest 物件
                 HttpWebRequest myHttpWebRequest1 = (HttpWebRequest)WebRequest.Create(url);
 
                 // 呼叫 BeginXXX 啟動非同步工作
-                Console.WriteLine($"啟動非同步方法 (Thread={Thread.CurrentThread.ManagedThreadId}):{DateTime.Now}");
+                Console.WriteLine($"啟動 APM 非同步方法 (Thread={Thread.CurrentThread.ManagedThreadId}):{DateTime.Now}");
                 IAsyncResult asyncResult =
-                  (IAsyncResult)myHttpWebRequest1.BeginGetResponse(null, null);
+                  (IAsyncResult)myHttpWebRequest1.BeginGetResponse(callBack, myHttpWebRequest1);
 
                 for (int i = 0; i < 3; i++)
                 {
                     Console.WriteLine($"   處理其他事情 (Thread={Thread.CurrentThread.ManagedThreadId}):{DateTime.Now}");
                     Thread.Sleep(1000);
                 }
-                // 等候，直到整個處理程序完成
-                // 當執行下面程式碼時候，整個 Thread 會被 Block，這個Thread要能繼續執行，必須等候到非同步工作完成
-                Console.WriteLine($"等候非同步方法完成 (Thread={Thread.CurrentThread.ManagedThreadId}):{DateTime.Now}");
-                asyncResult.AsyncWaitHandle.WaitOne();
 
-                // 當非同步處理程序完成後，就可以執行底下程式碼，我們就開始處理結果.
-                // 由於非同步工作已經完成了，所以，我們在此呼叫了 EndXXX 方法，取得非同步工作的處理結果
-                Console.WriteLine($"取得非同步方法結果 (Thread={Thread.CurrentThread.ManagedThreadId}):{DateTime.Now}");
-                WebResponse webResponse = myHttpWebRequest1.EndGetResponse(asyncResult);
-
-                Stream ReceiveStream = webResponse.GetResponseStream();
-                StreamReader reader = new StreamReader(ReceiveStream);
-                string result = reader.ReadToEnd();
-
-                Console.WriteLine($"網頁執行結果:{result}");
-
+                // 主執行緒的工作已經完成
                 Console.WriteLine("Press any key for continuing...");
                 Console.ReadKey();
             }

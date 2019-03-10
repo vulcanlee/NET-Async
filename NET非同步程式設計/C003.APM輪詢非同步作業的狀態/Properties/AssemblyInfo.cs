@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 組件的一般資訊是由下列的屬性集控制。
 // 變更這些屬性的值即可修改組件的相關
 // 資訊。
-[assembly: AssemblyTitle("C001.封鎖應用程式執行AsyncWaitHandle")]
+[assembly: AssemblyTitle("C003.APM輪詢非同步作業的狀態")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("C001.封鎖應用程式執行AsyncWaitHandle")]
+[assembly: AssemblyProduct("C003.APM輪詢非同步作業的狀態")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 下列 GUID 為專案公開 (Expose) 至 COM 時所要使用的 typelib ID
-[assembly: Guid("64f183fd-9aee-4196-aad8-79080e364dc8")]
+[assembly: Guid("7c7f65b2-0b1c-4816-bb39-154167d84e78")]
 
 // 組件的版本資訊由下列四個值所組成: 
 //
