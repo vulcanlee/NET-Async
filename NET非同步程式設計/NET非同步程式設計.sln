@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D001.GUI應用程式的造�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D003.Console應用程式的不會造成死結範例", "D003.Console應用程式的不會造成死結範例\D003.Console應用程式的不會造成死結範例.csproj", "{C09F8D51-B128-4F07-A763-73AE91C458A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C007.使用執行緒做到非同步處理作業", "C007.使用執行緒做到非同步處理作業\C007.使用執行緒做到非同步處理作業.csproj", "{1BD08C0E-F48D-491E-A271-23E1170B7F87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C008.使用執行緒做到非同步處理作業並取得執行結果", "C008.使用執行緒做到非同步處理作業並取得執行結果\C008.使用執行緒做到非同步處理作業並取得執行結果.csproj", "{A2F5213A-883C-43DE-8655-33419749577A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{C09F8D51-B128-4F07-A763-73AE91C458A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C09F8D51-B128-4F07-A763-73AE91C458A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C09F8D51-B128-4F07-A763-73AE91C458A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BD08C0E-F48D-491E-A271-23E1170B7F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD08C0E-F48D-491E-A271-23E1170B7F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BD08C0E-F48D-491E-A271-23E1170B7F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BD08C0E-F48D-491E-A271-23E1170B7F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2F5213A-883C-43DE-8655-33419749577A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2F5213A-883C-43DE-8655-33419749577A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2F5213A-883C-43DE-8655-33419749577A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2F5213A-883C-43DE-8655-33419749577A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
