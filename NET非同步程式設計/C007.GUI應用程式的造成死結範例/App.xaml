@@ -1,9 +1,0 @@
-﻿<Application x:Class="C007.GUI應用程式的造成死結範例.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:C007.GUI應用程式的造成死結範例"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
-</Application>
