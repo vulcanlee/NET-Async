@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C003.APM輪詢非同步作�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C004.APM.AsyncCallback委派結束非同步作業", "C004.APM.AsyncCallback委派結束非同步作業\C004.APM.AsyncCallback委派結束非同步作業.csproj", "{033841A5-9E28-478B-BFED-0B30E2A35F15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C007.GUI應用程式的造成死結範例", "C007.GUI應用程式的造成死結範例\C007.GUI應用程式的造成死結範例.csproj", "{28532A27-312D-4CDE-8A0D-97AF8E868F72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{033841A5-9E28-478B-BFED-0B30E2A35F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{033841A5-9E28-478B-BFED-0B30E2A35F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{033841A5-9E28-478B-BFED-0B30E2A35F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28532A27-312D-4CDE-8A0D-97AF8E868F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28532A27-312D-4CDE-8A0D-97AF8E868F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28532A27-312D-4CDE-8A0D-97AF8E868F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28532A27-312D-4CDE-8A0D-97AF8E868F72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
