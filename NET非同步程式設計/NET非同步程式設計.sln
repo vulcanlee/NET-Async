@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C007.使用執行緒做到�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C008.使用執行緒做到非同步處理作業並取得執行結果", "C008.使用執行緒做到非同步處理作業並取得執行結果\C008.使用執行緒做到非同步處理作業並取得執行結果.csproj", "{A2F5213A-883C-43DE-8655-33419749577A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D004.同步設計披薩製作", "D004.同步設計披薩製作\D004.同步設計披薩製作.csproj", "{224A465B-8780-4092-92D7-9DEBB7964D5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D005.非同步TAP設計披薩製作", "D005.非同步TAP設計披薩製作\D005.非同步TAP設計披薩製作.csproj", "{0CFAF7DF-4898-477B-B9EF-FA0F4B024804}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{A2F5213A-883C-43DE-8655-33419749577A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2F5213A-883C-43DE-8655-33419749577A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2F5213A-883C-43DE-8655-33419749577A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{224A465B-8780-4092-92D7-9DEBB7964D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{224A465B-8780-4092-92D7-9DEBB7964D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{224A465B-8780-4092-92D7-9DEBB7964D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{224A465B-8780-4092-92D7-9DEBB7964D5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CFAF7DF-4898-477B-B9EF-FA0F4B024804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CFAF7DF-4898-477B-B9EF-FA0F4B024804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CFAF7DF-4898-477B-B9EF-FA0F4B024804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CFAF7DF-4898-477B-B9EF-FA0F4B024804}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
