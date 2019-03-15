@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D006.建立和起始非同�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D007.建立和起始有參數非同步工作", "D007.建立和起始有參數非同步工作\D007.建立和起始有參數非同步工作.csproj", "{7C9C1854-5B35-4925-8530-89AAF21F6B93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D008.利用TAP工作建立大量並行工作練習", "D008.利用TAP工作建立大量並行工作練習\D008.利用TAP工作建立大量並行工作練習.csproj", "{D91D85C0-766C-423A-9733-215DD69EDFA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D009.主執行緒與背景執行緒特性", "D009.主執行緒與背景執行緒特性\D009.主執行緒與背景執行緒特性.csproj", "{E09366A1-BECA-4A8C-B185-381563EB88B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +103,14 @@ Global
 		{7C9C1854-5B35-4925-8530-89AAF21F6B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C9C1854-5B35-4925-8530-89AAF21F6B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C9C1854-5B35-4925-8530-89AAF21F6B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D91D85C0-766C-423A-9733-215DD69EDFA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91D85C0-766C-423A-9733-215DD69EDFA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91D85C0-766C-423A-9733-215DD69EDFA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91D85C0-766C-423A-9733-215DD69EDFA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E09366A1-BECA-4A8C-B185-381563EB88B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E09366A1-BECA-4A8C-B185-381563EB88B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E09366A1-BECA-4A8C-B185-381563EB88B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E09366A1-BECA-4A8C-B185-381563EB88B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
