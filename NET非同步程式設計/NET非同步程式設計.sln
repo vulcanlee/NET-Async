@@ -47,7 +47,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D013.非同步程式碼執�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D014.等待所有工作WaitAll完成執行", "D014.等待所有工作WaitAll完成執行\D014.等待所有工作WaitAll完成執行.csproj", "{455523E0-E72E-4E99-90A1-ACBA1C36C6D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D015.等待任一工作WaitAnyy完成執行", "D015.等待任一工作WaitAnyy完成執行\D015.等待任一工作WaitAnyy完成執行.csproj", "{C05A7A2E-3B67-40C6-9C71-0B8D204CE243}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D015.等待任一工作WaitAny完成執行", "D015.等待任一工作WaitAny完成執行\D015.等待任一工作WaitAny完成執行.csproj", "{C05A7A2E-3B67-40C6-9C71-0B8D204CE243}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

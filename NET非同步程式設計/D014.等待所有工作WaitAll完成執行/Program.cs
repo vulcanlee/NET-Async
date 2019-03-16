@@ -47,7 +47,7 @@ namespace D014.等待所有工作WaitAll完成執行
 
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("工作{0} 執行結果:{1}", i + 1, tasks[i].Result);
+                Console.WriteLine("  工作{0} 執行結果:{1}", i + 1, tasks[i].Result);
             }
 
             Console.WriteLine("按下任一按鍵，結束處理程序");

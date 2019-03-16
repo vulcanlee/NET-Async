@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace D015.等待任一工作WaitAnyy完成執行
+namespace D015.等待任一工作WaitAny完成執行
 {
     /// <summary>
     /// 這個範例展示了：等候任一提供的 Task 物件完成執行，而不需等到所有工作都完成才需要繼續接下來的工作

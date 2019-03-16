@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C05A7A2E-3B67-40C6-9C71-0B8D204CE243}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D015.等待任一工作WaitAnyy完成執行</RootNamespace>
-    <AssemblyName>D015.等待任一工作WaitAnyy完成執行</AssemblyName>
+    <RootNamespace>D015.等待任一工作WaitAny完成執行</RootNamespace>
+    <AssemblyName>D015.等待任一工作WaitAny完成執行</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
