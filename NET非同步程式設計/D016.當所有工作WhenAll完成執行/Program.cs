@@ -5,15 +5,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace D014.等待所有工作WaitAll完成執行
+namespace D016.當所有工作WhenAll完成執行
 {
-    /// <summary>
-    /// 這個範例展示了：等候所有提供的 Task 物件完成執行
-    /// 我們先啟動了3個非同步工作，接下來會等候，直到所有的工作都執行完成，並且將工作的執行結果輸出到Console上
-    /// </summary>
     class Program
     {
-        public static void Main()
+        public static async Task Main()
         {
             Task<int>[] tasks = new Task<int>[3];
 
@@ -41,15 +37,15 @@ namespace D014.等待所有工作WaitAll完成執行
             );
             #endregion
 
-            Console.WriteLine($"呼叫 Task.WaitAll 前的執行緒 : {Thread.CurrentThread.ManagedThreadId}");
-            Task.WaitAll(tasks); // 此處會造成現在執行緒被鎖定(Block)，直到所有的工作都完成(也許是失敗、取消)
-            Console.WriteLine($"呼叫 Task.WaitAll 後的執行緒 : {Thread.CurrentThread.ManagedThreadId}");
+            Console.WriteLine($"呼叫 前的執行緒 : {Thread.CurrentThread.ManagedThreadId}");
+            int[] tasksResult = await Task.WhenAll(tasks);
+            Console.WriteLine($"呼叫 後的執行緒 : {Thread.CurrentThread.ManagedThreadId}");
 
             Console.WriteLine($"結束執行三個非同步工作:{DateTime.Now}");
 
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("  工作{0} 執行結果:{1}", i + 1, tasks[i].Result);
+                Console.WriteLine("  工作{0} 執行結果:{1}", i + 1, tasksResult[i]);
             }
 
             Console.WriteLine("按下任一按鍵，結束處理程序");

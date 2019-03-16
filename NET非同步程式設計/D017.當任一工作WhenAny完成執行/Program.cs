@@ -5,16 +5,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace D015.等待任一工作WaitAny完成執行
+namespace D017.當任一工作WhenAny完成執行
 {
-    /// <summary>
-    /// 這個範例展示了：等候任一提供的 Task 物件完成執行，而不需等到所有工作都完成才需要繼續接下來的工作
-    /// 我們先啟動了3個非同步工作，接下來會等候，直到任一工作執行完成，並且將工作的執行結果輸出到Console上
-    /// 
-    /// </summary>
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Task<int>[] tasks = new Task<int>[3];
 
@@ -47,12 +42,11 @@ namespace D015.等待任一工作WaitAny完成執行
             {
                 // 取得已經完成的工作物件索引值
                 Console.WriteLine($"呼叫 Task.WaitAny 前的執行緒 : {Thread.CurrentThread.ManagedThreadId}");
-                int i = Task.WaitAny(tasks); // 此處會造成現在執行緒被鎖定(Block)，直到所有的工作都完成(也許是失敗、取消)
+                Task<int> task = await Task.WhenAny(tasks);
                 Console.WriteLine($"呼叫 Task.WaitAny 後的執行緒 : {Thread.CurrentThread.ManagedThreadId}");
-                Task<int> completedTask = tasks[i]; // 取得已經完成的工作物件 
-                Console.WriteLine($"    執行結果 {DateTime.Now} :{completedTask.Result}");
+                Console.WriteLine($"    執行結果 {DateTime.Now} :{task.Result}");
                 var temp = tasks.ToList();
-                temp.RemoveAt(i);  // 將已經完成的工作，從清單中移除
+                temp.Remove(task);  // 將已經完成的工作，從清單中移除
                 tasks = temp.ToArray();
             }
 
