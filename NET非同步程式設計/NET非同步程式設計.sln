@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D016.當所有工作WhenAll
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D018.同時呼叫多個WebAPI並取得計算結果練習", "D018.同時呼叫多個WebAPI並取得計算結果練習\D018.同時呼叫多個WebAPI並取得計算結果練習.csproj", "{BC379FEB-EC0F-480D-9A85-E291C95143C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D019.工作有繼續的不同狀態", "D019.工作有繼續的不同狀態\D019.工作有繼續的不同狀態.csproj", "{48E66C64-D9E9-41E3-AE16-451912651986}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{BC379FEB-EC0F-480D-9A85-E291C95143C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC379FEB-EC0F-480D-9A85-E291C95143C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC379FEB-EC0F-480D-9A85-E291C95143C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E66C64-D9E9-41E3-AE16-451912651986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E66C64-D9E9-41E3-AE16-451912651986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E66C64-D9E9-41E3-AE16-451912651986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E66C64-D9E9-41E3-AE16-451912651986}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
