@@ -61,6 +61,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D020.將AMP改成TAP", "D02
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D021.Task_WhenAll中一些工作發生例外狀況", "D021.Task_WhenAll中一些工作發生例外狀況\D021.Task_WhenAll中一些工作發生例外狀況.csproj", "{EBEB37D6-B404-4F7B-A425-F1D9BC6A49E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D022.取消HttpClient網路存取", "D022.取消HttpClient網路存取\D022.取消HttpClient網路存取.csproj", "{126F95EA-3991-4B23-B235-8EDED7BA0C94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D023.CreateLinkedTokenSource建立組合取消權杖來源", "D023.CreateLinkedTokenSource建立組合取消權杖來源\D023.CreateLinkedTokenSource建立組合取消權杖來源.csproj", "{8F2E9654-405D-42E3-9C1A-1F652C14337C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D024.將一個長時間執行的非同步工作取消", "D024.將一個長時間執行的非同步工作取消\D024.將一個長時間執行的非同步工作取消.csproj", "{2AF1548A-60F0-4EF0-8E4E-301DCEDA5A42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +189,18 @@ Global
 		{EBEB37D6-B404-4F7B-A425-F1D9BC6A49E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBEB37D6-B404-4F7B-A425-F1D9BC6A49E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBEB37D6-B404-4F7B-A425-F1D9BC6A49E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{126F95EA-3991-4B23-B235-8EDED7BA0C94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{126F95EA-3991-4B23-B235-8EDED7BA0C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{126F95EA-3991-4B23-B235-8EDED7BA0C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{126F95EA-3991-4B23-B235-8EDED7BA0C94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F2E9654-405D-42E3-9C1A-1F652C14337C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F2E9654-405D-42E3-9C1A-1F652C14337C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F2E9654-405D-42E3-9C1A-1F652C14337C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F2E9654-405D-42E3-9C1A-1F652C14337C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF1548A-60F0-4EF0-8E4E-301DCEDA5A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF1548A-60F0-4EF0-8E4E-301DCEDA5A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF1548A-60F0-4EF0-8E4E-301DCEDA5A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF1548A-60F0-4EF0-8E4E-301DCEDA5A42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

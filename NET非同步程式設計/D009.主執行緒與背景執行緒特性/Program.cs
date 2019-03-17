@@ -12,24 +12,25 @@ namespace D009.主執行緒與背景執行緒特性
         // Thread 使用的方法
         public static void Main()
         {
+            int maxLoop = 300000;
             new Thread(() =>
             {
-                for (int i = 0; i < 300; i++) { Console.Write("F"); }
+                for (int i = 0; i < maxLoop; i++) { Console.Write("F"); }
             })
             { IsBackground = true }.Start();
 
             new Thread(() =>
             {
-                for (int i = 0; i < 300; i++) { Console.Write("B"); }
+                for (int i = 0; i < maxLoop / 500; i++) { Console.Write("B"); }
             })
             { IsBackground = false }.Start();
 
             ThreadPool.QueueUserWorkItem((x) =>
             {
-                for (int i = 0; i < 300; i++) { Console.Write("P"); }
+                for (int i = 0; i < maxLoop; i++) { Console.Write("P"); }
             });
 
-            for (int i = 0; i < 100; i++) { Console.Write("M"); }
+            for (int i = 0; i < maxLoop / 500; i++) { Console.Write("M"); }
 
             Console.WriteLine("請按任一鍵，以結束執行");
             Console.ReadKey();
