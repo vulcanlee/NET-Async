@@ -67,6 +67,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D023.CreateLinkedTokenSourc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D024.將一個長時間執行的非同步工作取消", "D024.將一個長時間執行的非同步工作取消\D024.將一個長時間執行的非同步工作取消.csproj", "{2AF1548A-60F0-4EF0-8E4E-301DCEDA5A42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D025.Console專案的工作進度與取消", "D025.Console專案的工作進度與取消\D025.Console專案的工作進度與取消.csproj", "{7CB6F447-CBD2-487F-89CD-0135FE31DF24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D026.WPF專案的工作進度與取消", "D026.WPF專案的工作進度與取消\D026.WPF專案的工作進度與取消.csproj", "{D2842941-9E26-449F-BA33-6A990F394056}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -201,6 +205,14 @@ Global
 		{2AF1548A-60F0-4EF0-8E4E-301DCEDA5A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF1548A-60F0-4EF0-8E4E-301DCEDA5A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF1548A-60F0-4EF0-8E4E-301DCEDA5A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CB6F447-CBD2-487F-89CD-0135FE31DF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB6F447-CBD2-487F-89CD-0135FE31DF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB6F447-CBD2-487F-89CD-0135FE31DF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB6F447-CBD2-487F-89CD-0135FE31DF24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2842941-9E26-449F-BA33-6A990F394056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2842941-9E26-449F-BA33-6A990F394056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2842941-9E26-449F-BA33-6A990F394056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2842941-9E26-449F-BA33-6A990F394056}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
