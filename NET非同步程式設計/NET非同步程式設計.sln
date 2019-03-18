@@ -73,6 +73,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D026.WPF專案的工作進�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D027.WPF下await接續封送處理測試", "D027.WPF下await接續封送處理測試\D027.WPF下await接續封送處理測試.csproj", "{FA038159-572C-4320-9872-0728EA04B55D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D028.射後不理FireAndForget", "D028.射後不理FireAndForget\D028.射後不理FireAndForget.csproj", "{AE7AE9BE-322E-4EC0-A51B-35DDE91935CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D030.非同步與例外異常", "D030.非同步與例外異常\D030.非同步與例外異常.csproj", "{C1C35019-67CE-4071-95EA-5F8C3155F7F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -219,6 +223,14 @@ Global
 		{FA038159-572C-4320-9872-0728EA04B55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA038159-572C-4320-9872-0728EA04B55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA038159-572C-4320-9872-0728EA04B55D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7AE9BE-322E-4EC0-A51B-35DDE91935CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7AE9BE-322E-4EC0-A51B-35DDE91935CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7AE9BE-322E-4EC0-A51B-35DDE91935CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7AE9BE-322E-4EC0-A51B-35DDE91935CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C35019-67CE-4071-95EA-5F8C3155F7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C35019-67CE-4071-95EA-5F8C3155F7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C35019-67CE-4071-95EA-5F8C3155F7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C35019-67CE-4071-95EA-5F8C3155F7F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
