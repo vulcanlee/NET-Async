@@ -30,14 +30,14 @@ namespace D030.非同步與例外異常
                 cts.Cancel();
             });
 
-            try
-            {
-                await fooTask;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"發現例外異常，此例外異常型別為 : {ex.GetType().Name}");
-            }
+            //try
+            //{
+            await fooTask;
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"發現例外異常，此例外異常型別為 : {ex.GetType().Name}");
+            //}
 
             Console.WriteLine($"Status : {fooTask.Status}");
             Console.WriteLine($"IsCompleted : {fooTask.IsCompleted}");

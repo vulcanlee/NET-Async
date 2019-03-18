@@ -14,7 +14,7 @@ namespace D030.非同步與例外異常
             ThreadPool.QueueUserWorkItem(x =>
             {
                 // 當在執行緒內發生了例外異常，應用程式將會結束執行
-                throw new Exception("發生了例外異常");
+                throw new InvalidProgramException($"發生了例外異常");
             });
 
 

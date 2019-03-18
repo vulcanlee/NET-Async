@@ -19,23 +19,17 @@ namespace D030.非同步與例外異常
 
             // 因為當執行 WaitAll 屬於 封鎖 Block 模式，因此，在這個範例中，將會拋出例外異常
             // 因此，需要使用 Try...Catch 包起來，這樣程式碼才不會中斷
-            try
-            {
-                Task.WaitAll(allDelegateTasks);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"該工作有例外異常 {ex.Message}");
-            }
-            var fooIndex = 3;
-            var fooTask = allDelegateTasks[fooIndex];
+            Task.WaitAll(allDelegateTasks);
 
-            Console.WriteLine($"Status : {fooTask.Status}");
-            Console.WriteLine($"IsCompleted : {fooTask.IsCompleted}");
-            Console.WriteLine($"IsCanceled : {fooTask.IsCanceled}");
-            Console.WriteLine($"IsFaulted : {fooTask.IsFaulted}");
-            var exceptionStatusX = (fooTask.Exception == null) ? "沒有 AggregateException 物件" : "有 AggregateException 物件";
-            Console.WriteLine($"Exception : {exceptionStatusX}");
+            //var fooIndex = 3;
+            //var fooTask = allDelegateTasks[fooIndex];
+
+            //Console.WriteLine($"Status : {fooTask.Status}");
+            //Console.WriteLine($"IsCompleted : {fooTask.IsCompleted}");
+            //Console.WriteLine($"IsCanceled : {fooTask.IsCanceled}");
+            //Console.WriteLine($"IsFaulted : {fooTask.IsFaulted}");
+            //var exceptionStatusX = (fooTask.Exception == null) ? "沒有 AggregateException 物件" : "有 AggregateException 物件";
+            //Console.WriteLine($"Exception : {exceptionStatusX}");
 
             Console.WriteLine("按下任一按鍵，結束處理程序");
             Console.ReadKey();
@@ -48,7 +42,12 @@ namespace D030.非同步與例外異常
             if (id % 9 == 4)
             {
                 Console.WriteLine($"工作{id} 將要產生例外異常");
-                throw new Exception(string.Format("發生異常了，工作ID是{0}", id));
+                throw new InvalidCastException($"發生異常了，工作ID是{id}");
+            }
+            if (id % 9 == 6)
+            {
+                Console.WriteLine($"工作{id} 將要產生例外異常");
+                throw new InvalidProgramException($"發生了例外異常，工作ID是{id}");
             }
         }
     }

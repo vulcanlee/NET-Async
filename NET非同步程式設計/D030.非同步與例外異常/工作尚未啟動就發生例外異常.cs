@@ -16,7 +16,7 @@ namespace D030.非同步與例外異常
             {
                 // 當在工作內發生了例外異常，應用程式不會受到影響
                 Thread.Sleep(1000);
-                throw new Exception("發生了例外異常");
+                throw new InvalidProgramException("發生了例外異常");
             });
 
             fooTask.ContinueWith(x =>

@@ -12,15 +12,17 @@ namespace D030.非同步與例外異常
         static void Main(string[] args)
         {
             Task[] allDelegateTasks = (from 工作ID in 工作IDs select 非同步工作委派方法Async(工作ID)).ToArray();
-            var fooIndex = Task.WaitAny(allDelegateTasks);
-            var fooTask = allDelegateTasks[fooIndex];
 
+            var fooIndex = Task.WaitAny(allDelegateTasks);
+
+            var fooTask = allDelegateTasks[fooIndex];
+            Console.WriteLine($"第 {fooIndex} 工作有產生例外異常");
             Console.WriteLine($"Status : {fooTask.Status}");
             Console.WriteLine($"IsCompleted : {fooTask.IsCompleted}");
             Console.WriteLine($"IsCanceled : {fooTask.IsCanceled}");
             Console.WriteLine($"IsFaulted : {fooTask.IsFaulted}");
             var exceptionStatusX = (fooTask.Exception == null) ? "沒有 AggregateException 物件" : "有 AggregateException 物件";
-            Console.WriteLine($"Exception : {exceptionStatusX}");
+            //Console.WriteLine($"Exception : {exceptionStatusX}");
 
             Console.WriteLine("按下任一按鍵，結束處理程序");
             Console.ReadKey();
@@ -33,7 +35,12 @@ namespace D030.非同步與例外異常
             if (id % 9 == 1)
             {
                 Console.WriteLine($"工作{id} 將要產生例外異常");
-                throw new Exception(string.Format("發生異常了，工作ID是{0}", id));
+                throw new InvalidCastException($"發生異常了，工作ID是{id}");
+            }
+            if (id % 9 == 6)
+            {
+                Console.WriteLine($"工作{id} 將要產生例外異常");
+                throw new InvalidProgramException($"發生了例外異常，工作ID是{id}");
             }
         }
     }

@@ -13,7 +13,7 @@ namespace D030.非同步與例外異常
         {
             var fooTask = Task.Run(() =>
             {
-                throw new Exception("發生了例外異常");
+                throw new InvalidProgramException("發生了例外異常");
             });
 
             Thread.Sleep(800);

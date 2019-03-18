@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="工作WhentAll例外異常.cs" />
+    <Compile Include="工作尚未啟動就發生例外異常.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

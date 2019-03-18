@@ -19,7 +19,7 @@ namespace D030.非同步與例外異常
                 {
                     token.ThrowIfCancellationRequested();
                 }
-            }, token);
+            });
 
             var barTask = Task.Run(async () =>
             {
@@ -29,21 +29,21 @@ namespace D030.非同步與例外異常
                 cts.Cancel();
             });
 
-            try
-            {
-                fooTask.Wait();
-            }
-            catch (AggregateException ex)
-            {
-                Console.WriteLine($"Status : {fooTask.Status}");
-                Console.WriteLine($"IsCompleted : {fooTask.IsCompleted}");
-                Console.WriteLine($"IsCanceled : {fooTask.IsCanceled}");
-                Console.WriteLine($"IsFaulted : {fooTask.IsFaulted}");
-                var exceptionStatus = (fooTask.Exception == null) ? "沒有 AggregateException 物件" : "有 AggregateException 物件";
-                Console.WriteLine($"Exception : {exceptionStatus}");
-                exceptionStatus = (ex.InnerExceptions == null) ? "沒有 AggregateException 物件" : "有 AggregateException 物件";
-                Console.WriteLine($"Wait() Exception : {exceptionStatus}");
-            }
+            //try
+            //{
+            fooTask.Wait();
+            //}
+            //catch (AggregateException ex)
+            //{
+            //    Console.WriteLine($"Status : {fooTask.Status}");
+            //    Console.WriteLine($"IsCompleted : {fooTask.IsCompleted}");
+            //    Console.WriteLine($"IsCanceled : {fooTask.IsCanceled}");
+            //    Console.WriteLine($"IsFaulted : {fooTask.IsFaulted}");
+            //    var exceptionStatus = (fooTask.Exception == null) ? "沒有 AggregateException 物件" : "有 AggregateException 物件";
+            //    Console.WriteLine($"Exception : {exceptionStatus}");
+            //    exceptionStatus = (ex.InnerExceptions == null) ? "沒有 AggregateException 物件" : "有 AggregateException 物件";
+            //    Console.WriteLine($"Wait() Exception : {exceptionStatus}");
+            //}
 
             Console.WriteLine("Press any key for continuing...");
             Console.ReadKey();

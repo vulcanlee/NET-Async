@@ -16,14 +16,14 @@ namespace D030.非同步與例外異常
                 throw new InvalidProgramException("發生了例外異常");
             });
 
-            try
-            {
-                await fooTask;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"發現例外異常，此例外異常型別為 : {ex.GetType().Name}");
-            }
+            //try
+            //{
+            await fooTask;
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"發現例外異常，此例外異常型別為 : {ex.GetType().Name}");
+            //}
 
             Console.WriteLine("Press any key for continuing...");
             Console.ReadKey();
