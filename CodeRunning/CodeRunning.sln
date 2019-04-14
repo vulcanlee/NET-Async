@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "同步執行", "同步執行\同步執行.csproj", "{DCAA8269-CC56-4E25-A946-4D3C9BBD1E75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "有Callback的多執行緒", "有Callback的多執行緒\有Callback的多執行緒.csproj", "{55D5716C-5355-4236-91E0-DF0776A3DDEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "非同步方法與非同步工作", "非同步方法與非同步工作\非同步方法與非同步工作.csproj", "{C6E9AA04-3510-431D-AF7F-91047F1D8242}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "async方法的執行順序", "async方法的執行順序\async方法的執行順序.csproj", "{73B55F8B-5E9C-4707-97D6-8F78781FF382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "多執行緒與等待結束", "多執行緒與等待結束\多執行緒與等待結束.csproj", "{2D7FF212-9A78-4EAD-A28A-F98BD28AD761}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCAA8269-CC56-4E25-A946-4D3C9BBD1E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAA8269-CC56-4E25-A946-4D3C9BBD1E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCAA8269-CC56-4E25-A946-4D3C9BBD1E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAA8269-CC56-4E25-A946-4D3C9BBD1E75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D5716C-5355-4236-91E0-DF0776A3DDEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D5716C-5355-4236-91E0-DF0776A3DDEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D5716C-5355-4236-91E0-DF0776A3DDEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D5716C-5355-4236-91E0-DF0776A3DDEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E9AA04-3510-431D-AF7F-91047F1D8242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E9AA04-3510-431D-AF7F-91047F1D8242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E9AA04-3510-431D-AF7F-91047F1D8242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E9AA04-3510-431D-AF7F-91047F1D8242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B55F8B-5E9C-4707-97D6-8F78781FF382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B55F8B-5E9C-4707-97D6-8F78781FF382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B55F8B-5E9C-4707-97D6-8F78781FF382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B55F8B-5E9C-4707-97D6-8F78781FF382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D7FF212-9A78-4EAD-A28A-F98BD28AD761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7FF212-9A78-4EAD-A28A-F98BD28AD761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D7FF212-9A78-4EAD-A28A-F98BD28AD761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D7FF212-9A78-4EAD-A28A-F98BD28AD761}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFABDD61-7D1D-4088-8B7C-722496A339C2}
+	EndGlobalSection
+EndGlobal
