@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "捕捉不到例外異常", "捕捉不到例外異常\捕捉不到例外異常.csproj", "{D09DC297-AE17-4501-9F99-D081C499D9FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "程式突然當掉_卻不知道問題在哪裡", "程式突然當掉_卻不知道問題在哪裡\程式突然當掉_卻不知道問題在哪裡.csproj", "{B6CB83A1-2E1B-4C7D-9AF3-EDA096023D82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "為何會拋出不同例外異常", "為何會拋出不同例外異常\為何會拋出不同例外異常.csproj", "{FB8390BC-40BA-4863-BB8C-0D5760D59FFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "程式打死結卡住了ASPNET", "程式打死結卡住了ASPNET\程式打死結卡住了ASPNET.csproj", "{CCCB1E5C-92A0-4E6E-A725-91C2F7113BC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "程式打死結卡住了WinForms", "程式打死結卡住了WinForms\程式打死結卡住了WinForms.csproj", "{550EDF19-F1CC-4369-BE59-BAD60E5A8C7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "無法正常更新物件ASPNET", "無法正常更新物件ASPNET\無法正常更新物件ASPNET.csproj", "{C05CDAFD-46BD-40C2-9797-79CA9EFCE4A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "更新UI物件卻會當掉WinForms", "更新UI物件卻會當掉WinForms\更新UI物件卻會當掉WinForms.csproj", "{9375DE07-6FCE-4CEE-9CA5-E5FD139CA061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI會停頓與不順暢WinForms", "UI會停頓與不順暢WinForms\UI會停頓與不順暢WinForms.csproj", "{067458DD-3695-4C2B-8C24-2D884C0B19A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D09DC297-AE17-4501-9F99-D081C499D9FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D09DC297-AE17-4501-9F99-D081C499D9FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D09DC297-AE17-4501-9F99-D081C499D9FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D09DC297-AE17-4501-9F99-D081C499D9FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6CB83A1-2E1B-4C7D-9AF3-EDA096023D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6CB83A1-2E1B-4C7D-9AF3-EDA096023D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6CB83A1-2E1B-4C7D-9AF3-EDA096023D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6CB83A1-2E1B-4C7D-9AF3-EDA096023D82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB8390BC-40BA-4863-BB8C-0D5760D59FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB8390BC-40BA-4863-BB8C-0D5760D59FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB8390BC-40BA-4863-BB8C-0D5760D59FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB8390BC-40BA-4863-BB8C-0D5760D59FFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCCB1E5C-92A0-4E6E-A725-91C2F7113BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCB1E5C-92A0-4E6E-A725-91C2F7113BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCCB1E5C-92A0-4E6E-A725-91C2F7113BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCCB1E5C-92A0-4E6E-A725-91C2F7113BC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550EDF19-F1CC-4369-BE59-BAD60E5A8C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550EDF19-F1CC-4369-BE59-BAD60E5A8C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550EDF19-F1CC-4369-BE59-BAD60E5A8C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550EDF19-F1CC-4369-BE59-BAD60E5A8C7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C05CDAFD-46BD-40C2-9797-79CA9EFCE4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05CDAFD-46BD-40C2-9797-79CA9EFCE4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05CDAFD-46BD-40C2-9797-79CA9EFCE4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05CDAFD-46BD-40C2-9797-79CA9EFCE4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9375DE07-6FCE-4CEE-9CA5-E5FD139CA061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9375DE07-6FCE-4CEE-9CA5-E5FD139CA061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9375DE07-6FCE-4CEE-9CA5-E5FD139CA061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9375DE07-6FCE-4CEE-9CA5-E5FD139CA061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{067458DD-3695-4C2B-8C24-2D884C0B19A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{067458DD-3695-4C2B-8C24-2D884C0B19A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{067458DD-3695-4C2B-8C24-2D884C0B19A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{067458DD-3695-4C2B-8C24-2D884C0B19A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2A12D4A-1162-45E7-BD61-F0E7628EE377}
+	EndGlobalSection
+EndGlobal
