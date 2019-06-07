@@ -16,6 +16,12 @@ namespace 程式打死結卡住了ASPNET.Controllers
             var result = sumTask.Result;
             return View();
         }
+        //public async Task<ActionResult> Index()
+        //{
+        //    var sumTask = SumAsync(168, 89);
+        //    var result = await sumTask;
+        //    return View();
+        //}
         async Task<string> SumAsync(int a, int b)
         {
             var client = new HttpClient();

@@ -18,10 +18,16 @@ namespace 程式打死結卡住了WinForms
             InitializeComponent();
         }
 
+        //private void Button1_Click(object sender, EventArgs e)
+        //{
+        //    var sumTask = SumAsync(168, 89);
+        //    var result = sumTask.Result;
+        //    label1.Text = result;
+        //}
         private async void Button1_Click(object sender, EventArgs e)
         {
             var sumTask = SumAsync(168, 89);
-            var result = sumTask.Result;
+            var result = await sumTask;
             label1.Text = result;
         }
         async Task<string> SumAsync(int a, int b)

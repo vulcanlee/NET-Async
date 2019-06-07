@@ -30,5 +30,22 @@ namespace 更新UI物件卻會當掉WinForms
                  label1.Text = result;
              });
         }
+
+        //private async void Button1_Click(object sender, EventArgs e)
+        //{
+        //    Action<string> UpdateUI = x =>
+        //    {
+        //        label1.Text = x;
+        //    };
+        //    await Task.Run(async () =>
+        //    {
+        //        var client = new HttpClient();
+        //        var task = client.GetStringAsync(
+        //            "https://lobworkshop.azurewebsites.net" +
+        //            $"/api/RemoteSource/Add/99/87/2");
+        //        var result = await task;
+        //        this.Invoke(UpdateUI, result);
+        //    });
+        //}
     }
 }

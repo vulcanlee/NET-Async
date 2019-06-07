@@ -22,5 +22,10 @@ namespace UI會停頓與不順暢WinForms
         {
             Thread.Sleep(3000);
         }
+
+        //private async void Button1_Click(object sender, EventArgs e)
+        //{
+        //    await Task.Delay(3000);
+        //}
     }
 }
