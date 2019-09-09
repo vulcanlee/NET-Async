@@ -27,23 +27,14 @@ namespace 無法正常更新物件ASPNET.Controllers
         //    }
         //    return View();
         //}
+
         public async Task<ActionResult> Index()
         {
-            var sc = SynchronizationContext.Current;
             WebClient wc = new WebClient();
-            wc.DownloadStringCompleted += (s, e) =>
-            {
-                sc.Post(x =>
-                {
-                    ViewBag.Name = "OK" + e.Result;
-                }, null);
-            };
-            wc.DownloadStringAsync(new Uri("https://lobworkshop.azurewebsites.net" +
-                    $"/api/RemoteSource/Add/99/87/2"));
-            while (wc.IsBusy)
-            {
-                Thread.Sleep(30);
-            }
+
+            var result = await wc.DownloadStringTaskAsync(new Uri("https://lobworkshop.azurewebsites.net" +
+                        $"/api/RemoteSource/Add/99/87/2"));
+            ViewBag.Name = "OK" + result;
             return View();
         }
 
