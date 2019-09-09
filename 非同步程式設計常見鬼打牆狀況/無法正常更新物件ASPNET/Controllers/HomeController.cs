@@ -25,6 +25,21 @@ namespace 無法正常更新物件ASPNET.Controllers
         //    {
         //        Thread.Sleep(30);
         //    }
+
+        //    Thread.Sleep(3000);
+        //    return View();
+        //}
+
+        //public async Task<ActionResult> Index()
+        //{
+        //    WebClient wc = new WebClient();
+
+        //    var task = wc.DownloadStringTaskAsync(new Uri("https://lobworkshop.azurewebsites.net" +
+        //    $"/api/RemoteSource/Add/99/87/2"));
+        //    string result = await task;
+        //    //ViewBag.Name = "OK" + result;
+        //    await Task.Run(() => ViewBag.Name = "OK" + result);
+
         //    return View();
         //}
 
@@ -32,9 +47,12 @@ namespace 無法正常更新物件ASPNET.Controllers
         {
             WebClient wc = new WebClient();
 
-            var result = await wc.DownloadStringTaskAsync(new Uri("https://lobworkshop.azurewebsites.net" +
-                        $"/api/RemoteSource/Add/99/87/2"));
+            var task = wc.DownloadStringTaskAsync(new Uri("https://lobworkshop.azurewebsites.net" +
+            $"/api/RemoteSource/Add/99/87/2"));
+            task.Wait();
+            string result = task.Result;
             ViewBag.Name = "OK" + result;
+
             return View();
         }
 
