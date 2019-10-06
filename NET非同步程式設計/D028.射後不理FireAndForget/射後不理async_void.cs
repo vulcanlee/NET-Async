@@ -18,7 +18,7 @@ namespace D028.射後不理FireAndForget
             Console.WriteLine("Press any key for 了解當非同步工作內拋出例外異常，會如何？");
             Console.ReadKey();
 
-            // 為何這行不會造成應用程式崩潰
+            // 這裡會造成應用程式崩潰，因為採用射後不理，該非同步運作沒有封裝在工作物件內
             OnDelegateWithExceptionAsync();
 
             Console.WriteLine("Press any key for continuing...");
