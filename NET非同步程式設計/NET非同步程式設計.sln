@@ -81,7 +81,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D029.Sleep與Delay差異", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C009.執行緒不安全的範例", "C009.執行緒不安全的範例\C009.執行緒不安全的範例.csproj", "{855EC981-9D50-4B0D-AA38-3D7E5C24901E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D031.實驗在執行緒內拋出例外異常可否捕捉到", "D031實驗在執行緒內拋出例外異常可否捕捉到\D031.實驗在執行緒內拋出例外異常可否捕捉到.csproj", "{C838D951-0C61-47DC-9561-559D7333C19F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D031.實驗在執行緒內拋出例外異常可否捕捉到", "D031實驗在執行緒內拋出例外異常可否捕捉到\D031.實驗在執行緒內拋出例外異常可否捕捉到.csproj", "{C838D951-0C61-47DC-9561-559D7333C19F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D032.工作與執行緒TaskRun", "D032.工作與執行緒TaskRun\D032.工作與執行緒TaskRun.csproj", "{CDAA67FF-AC6A-4A2C-9366-05F18BEFAAEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -249,6 +251,10 @@ Global
 		{C838D951-0C61-47DC-9561-559D7333C19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C838D951-0C61-47DC-9561-559D7333C19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C838D951-0C61-47DC-9561-559D7333C19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDAA67FF-AC6A-4A2C-9366-05F18BEFAAEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDAA67FF-AC6A-4A2C-9366-05F18BEFAAEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDAA67FF-AC6A-4A2C-9366-05F18BEFAAEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDAA67FF-AC6A-4A2C-9366-05F18BEFAAEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
