@@ -5,7 +5,8 @@
 //#define AsyncMethodForHttpClientTask
 //#define AsyncMethodForHttpClientSync
 //#define TaskCompletionSourceWithTaskRun
-#define TaskCompletionSourceWithTaskRunSync
+//#define TaskCompletionSourceWithTaskRunSync
+#define NoAwaitAsyncMethod
 using System;
 using System.Collections.Concurrent;
 using System.Diagnostics;
@@ -79,7 +80,7 @@ namespace D032.工作與執行緒TaskRun
 #endif
 
 #if HttpClientTask
-            #region 使用 HttpClient
+            #region 使用 HttpClient 非同步工作
             var task = new HttpClient().GetStringAsync($"https://hyperfullstack.azurewebsites.net/" +
                 $"api/HandOnLab/AddAsync/8/9/3");
 
@@ -94,7 +95,7 @@ namespace D032.工作與執行緒TaskRun
 #endif
 
 #if AsyncMethodForHttpClientTask
-            #region 使用 Async Method for HttpClient
+            #region 在非同步方法內呼叫 HttpClient 非同步工作 
             MyMethodAsyncDel myMethodAsyncHandler ;
             myMethodAsyncHandler = async x =>
             {
@@ -119,7 +120,7 @@ namespace D032.工作與執行緒TaskRun
 #endif
 
 #if AsyncMethodForHttpClientSync
-            #region 使用 Async Method for HttpClient
+            #region 在非同步方法內尚未執行到 await 就立即返回
             MyMethodAsyncDel myMethodAsyncHandler ;
             myMethodAsyncHandler = async x =>
             {
@@ -150,7 +151,7 @@ namespace D032.工作與執行緒TaskRun
 #endif
 
 #if TaskCompletionSourceWithTaskRun
-            #region 使用 Async Method for HttpClient
+            #region 使用 TaskCompletionSource 建立非同步工作物件
             MyMethodAsyncDel myMethodAsyncHandler ;
             myMethodAsyncHandler = x =>
             {
@@ -178,7 +179,7 @@ namespace D032.工作與執行緒TaskRun
 #endif
 
 #if TaskCompletionSourceWithTaskRunSync
-            #region 使用 Async Method for HttpClient
+            #region 使用 TaskCompletionSource 建立非同步工作物件，尚未觸發非同步作業，就立即返回
             MyMethodAsyncDel myMethodAsyncHandler ;
             myMethodAsyncHandler = x =>
             {
@@ -210,6 +211,28 @@ namespace D032.工作與執行緒TaskRun
             Thread.Sleep(500);
             #endregion
 #endif
+
+#if NoAwaitAsyncMethod
+            #region 使用 一個沒有 await 的非同步方法
+            MyMethodAsyncDel myMethodAsyncHandler ;
+            myMethodAsyncHandler = async x =>
+            {
+                PrintThreadInformation("模擬同步作業約3秒中");
+                Thread.Sleep(3000);
+
+                return ;
+            };
+            var task = myMethodAsyncHandler("");
+
+            PrintThreadInformation($"等待非同步方法中");
+            Thread.Sleep(500);
+
+            task.Wait();
+
+            PrintThreadInformation($"非同步作業完成");
+            Thread.Sleep(500);
+            #endregion
+#endif
         }
 
         static void Output(string message)
@@ -217,19 +240,6 @@ namespace D032.工作與執行緒TaskRun
             //queue.Enqueue(message);
             Console.WriteLine(message);
         }
-        //static void ShowThreadInformation()
-        //{
-        //    Thread thread = new Thread(() =>
-        //    {
-        //        while (runningLoop)
-        //        {
-        //            PrintThreadInformation();
-        //            Thread.Sleep(500);
-        //        }
-        //    });
-        //    thread.IsBackground = true;
-        //    thread.Start();
-        //}
         static void PrintThreadInformation(string message)
         {
             lock (locker)
