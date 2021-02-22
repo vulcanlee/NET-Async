@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Diagnostics;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,13 +18,35 @@ namespace D032.工作與執行緒TaskRun
             PrintThreadInformation("準備啟動非同步作業");
             Thread.Sleep(500);
 
-            Task task = Task.Run(() =>
-            {
-                PrintThreadInformation("模擬非同步作業約3秒中");
-                Thread.Sleep(3000);
-                autoResetEvent.Set();
-            });
+            #region Task.Delay
+            //Task task = Task.Delay(3000);
 
+            //PrintThreadInformation($"等待非同步作業中");
+            //Thread.Sleep(500);
+
+            //task.Wait();
+
+            //PrintThreadInformation($"非同步作業完成");
+            //Thread.Sleep(500);
+            #endregion
+
+            #region Task.Run
+            //Task task = Task.Run(() =>
+            //{
+            //    PrintThreadInformation("模擬非同步作業約3秒中");
+            //    Thread.Sleep(3000);
+            //});
+
+            //PrintThreadInformation($"等待非同步作業中");
+            //Thread.Sleep(500);
+
+            //task.Wait();
+
+            //PrintThreadInformation($"非同步作業完成");
+            //Thread.Sleep(500);
+            #endregion
+
+            #region ThreadPool.QueueUserWorkItem
             //ThreadPool.QueueUserWorkItem(_ =>
             //{
             //    PrintThreadInformation($"模擬非同步作業約3秒中");
@@ -31,14 +54,53 @@ namespace D032.工作與執行緒TaskRun
             //    autoResetEvent.Set();
             //});
 
-            PrintThreadInformation($"等待非同步作業中");
-            Thread.Sleep(500);
+            //PrintThreadInformation($"等待非同步作業中");
+            //Thread.Sleep(500);
 
-            autoResetEvent.WaitOne();
+            //autoResetEvent.WaitOne();
 
-            PrintThreadInformation($"非同步作業完成");
-            Thread.Sleep(500);
+            //PrintThreadInformation($"非同步作業完成");
+            //Thread.Sleep(500);
+            #endregion
+
+            #region 使用 HttpClient
+            //var task = new HttpClient().GetStringAsync($"https://hyperfullstack.azurewebsites.net/" +
+            //    $"api/HandOnLab/AddAsync/8/9/3");
+
+            //PrintThreadInformation($"等待非同步作業中");
+            //Thread.Sleep(500);
+
+            //task.Wait();
+
+            //PrintThreadInformation($"非同步作業完成");
+            //Thread.Sleep(500);
+            #endregion
+
+            #region 使用 Async Method for HttpClient
+            //var task = MethodHttpClientAsync();
+
+            //PrintThreadInformation($"等待非同步方法中");
+            //Thread.Sleep(500);
+
+            //task.Wait();
+
+            //PrintThreadInformation($"非同步作業完成");
+            //Thread.Sleep(500);
+            #endregion
+
         }
+
+        static async Task MethodHttpClientAsync()
+        {
+            var task = new HttpClient().GetStringAsync($"https://hyperfullstack.azurewebsites.net/" +
+                $"api/HandOnLab/AddAsync/8/9/3");
+
+            PrintThreadInformation($"等候取得 HttpClient 結果中");
+            Thread.Sleep(500);
+
+            await task;
+        }
+
         static void Output(string message)
         {
             //queue.Enqueue(message);
